@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: white;
+}
+
+.pin-container {
+    width: 160px;
+    height: 200px;
+    position: relative;
+}
+
+.pin-head {
+    width: 160px;
+    height: 160px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.gauge-ring {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: conic-gradient(from 145deg,
+            white 0deg 90deg,
+            #008755 55deg,
+            #00a86b 180deg,
+            #ffa500 340deg,
+            white 305deg);
+}
+
+.cap {
+    position: absolute;
+    width: 25px;
+    height: 14.5px;
+    bottom: 43px;
+}
+
+.cap-left {
+    left: 15px;
+    top: 115px;
+    background: #008755;
+    border-top-right-radius: 125px;
+    border-top-left-radius: 125px;
+    transform: rotate(145deg);
+}
+
+.cap-right {
+    right: 15px;
+    top: 115px;
+    background: #ffa500;
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 12.5px;
+    transform: rotate(215deg);
+}
+
+.gauge-center {
+    width: 110px;
+    height: 110px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.indicator-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 2px solid #ffa500;
+    border-radius: 50%;
+    bottom: 43px;
+    right: 14px;
+    top: 107px;
+    z-index: 2;
+}
+
+.pin-point {
+    width: 0;
+    height: 0;
+    border-left: 17.5px solid transparent;
+    border-right: 17.5px solid transparent;
+    border-top: 30px solid white;
+    position: absolute;
+    bottom: 15px;
+    left: 65px;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.main-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.small-value {
+    position: absolute;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.left-value {
+    bottom: 50px;
+    left: 36px;
+    color: #008755;
+}
+
+.right-value {
+    bottom: 50px;
+    right: 40px;
+    color: #ffa500;
+}
+
+.bottom-dot {
+    width: 12px;
+    height: 12px;
+    background: #ffff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 77px;
+    z-index: -1;
+    filter: drop-shadow(0 3px 3px rgba(0.1, 0.1, 0.1, 0.2));
+}
